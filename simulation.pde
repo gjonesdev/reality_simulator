@@ -30,3 +30,12 @@ void draw() {
   rect(0, height - 10, width, height - 10);
   popMatrix();
 }
+
+void keyPressed() {
+  switch(key) {
+  case 1:
+  case ' ':
+    grass_length = 0;
+    break;
+  }
+}
