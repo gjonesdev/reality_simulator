@@ -1,43 +1,32 @@
-
-Drop[] drops = new Drop[500]; // array of drop objects/
-Cloud[] clouds = new Cloud[10];
+float alpha;
 int weather;
+float treepos;
 
 void setup() {
-  fullScreen(); // size of the window
-  for (int i = 0; i < drops.length; i++) { // we create the drops 
-    drops[i] = new Drop();
+  fullScreen(); 
+  drops = new ArrayList<Drop>(); 
+  clouds = new ArrayList<Cloud>();
+  stars = new ArrayList<Star>();
+  for (int i = 0; i < 50; i++) {
+    Star s = new Star();
+    stars.add(s);
   }
-
-  for (int i = 0; i < clouds.length; i++) { // we create the drops 
-    clouds[i] = new Cloud();
-  }
-  fill(0, 183, 35);
-  rect(0, height - 30, width, height - 30);
+  treepos = random(100, width - 100);
 }
 
 void draw() {
+  color_select();
   cycle();
+  stars();
+  landscape();
   tree();
-
-  print(weather);
-  if (newday) {
-    weather = int(random(3));
-    newday = false;
-  }
-  if (weather == 1) {
-    cloudy();
-  }
-  if (weather == 2) {
-    cloudy();
-    rain();
-  }
+  grass();
+  rain();
+  cloudy();
+  weather();
+  noStroke();
+  pushMatrix();
+  fill(#6A481C);
+  rect(0, height - 10, width, height - 10);
+  popMatrix();
 }
-
-
-
-
-  //if milli % 360 = 0 new day
-  // if new day choose random weather from array
-
-  // sun starts at bottom goes off screen
