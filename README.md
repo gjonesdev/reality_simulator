@@ -16,7 +16,6 @@ A video of the simulation being demoed can be found here:
 ## INITIAL CONCEPTS
 This project is based on an animation I made a bit ago. Here are some early sketches/ work in progress shots for this project:
 
-![A visual of the initial mask concept](//)
-![A visual of the initial mask concept](//)
-![A visual of the initial mask concept](//)
+![An early sketch of the concept](https://github.com/gjonesdesign/Reality-Simulator/blob/master/screenshots/sketch.png)
+![An image of an early prototype](https://github.com/gjonesdesign/Reality-Simulator/blob/master/screenshots/early_prototype.png)
 
